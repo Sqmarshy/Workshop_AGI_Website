@@ -152,6 +152,103 @@
             border-radius: 25px;
             font-weight: bold;
         }
+
+        .speaker-image-container {
+                    width: 70%;
+                    max-width: 180px;
+                }
+                
+                .speaker-col {
+                    flex: 0 0 20%;
+                    max-width: 20%;
+                }
+                
+                @media (max-width: 1199px) {
+                    .speaker-col {
+                        flex: 0 0 25%;
+                        max-width: 25%;
+                    }
+                }
+                
+                @media (max-width: 991px) {
+                    .speaker-col {
+                        flex: 0 0 33.333%;
+                        max-width: 33.333%;
+                    }
+                }
+                
+                @media (max-width: 767px) {
+                    .speaker-col {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                    
+                    .speaker-image-container {
+                        width: 60%;
+                        max-width: 150px;
+                    }
+                }
+                
+                @media (max-width: 576px) {
+                    .speaker-col {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                    
+                    .speaker-image-container {
+                        width: 50%;
+                        max-width: 120px;
+                    }
+                }
+
+
+                .committee-image-container {
+                    width: 70%;
+                    max-width: 180px;
+                }
+
+                .committee-card {
+                    height: 100%;
+                    transition: transform 0.3s;
+                }
+                
+                .committee-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                }
+                
+                .committee-col {
+                    flex: 0 0 20%;
+                    max-width: 20%;
+                }
+                
+                @media (max-width: 1199px) {
+                    .committee-col {
+                        flex: 0 0 25%;
+                        max-width: 25%;
+                    }
+                }
+                
+                @media (max-width: 991px) {
+                    .committee-col {
+                        flex: 0 0 33.333%;
+                        max-width: 33.333%;
+                    }
+                }
+                
+                @media (max-width: 767px) {
+                    .committee-col {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+                
+                @media (max-width: 576px) {
+                    .committee-col {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
     </style>
 </head>
 
@@ -167,7 +264,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#schedule" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Schedule</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#speakers" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Keynote Speaker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#speakers" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Speakers</a></li>
                     <li class="nav-item"><a class="nav-link" href="#registration" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Registration</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sponsors" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Sponsors</a></li>
                 </ul>
@@ -176,7 +273,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" style="background-image: url('./cover_new.jpg'); background-size: cover; background-position: center; color: white; padding: 140px 0; text-align: left;">
+    <section class="hero-section" style="background-image: url('./data/Others/cover_new.jpg'); background-size: cover; background-position: center; color: white; padding: 140px 0; text-align: left;">
         <div class="container">
             <h1 style="font-family: 'Montserrat', 'Arial', sans-serif; font-weight: 800; font-size: 3.6rem; line-height: 1.2; margin-bottom: 1.5rem; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">Workshop on Frontiers of <br>Artificial General Intelligence (AGI)</h1>
 	    <h3 style="font-family: 'Montserrat', 'Arial', sans-serif; font-weight: 600; font-size: 2rem; display: flex; align-items: center; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 3px rgba(0,0,0,0.5);">
@@ -363,7 +460,7 @@
                             <h5 class="border-bottom pb-2">Biography</h5>
                             <div class="bio-section">
                                 <div class="float-md-start me-md-4 mb-3" style="max-width: 250px;">
-                                    <img src="./speaker.jpg" 
+                                    <img src="./data/Speakers/speaker.jpg" 
                                         alt="Prof. Song-Chun Zhu" 
                                         class="img-fluid rounded"
                                         style="width: 100%; height: auto;">
@@ -395,7 +492,418 @@
         </div>
     </section>
 
+    <section id="additional-speakers" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Speakers</h2>
+                        
+            <div class="row">
+                <!-- Speaker 1 -->
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Archan-Welcome1,SMU.jpeg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Welcome</h5>
+                            <p class="speaker-name text-danger fw-bold">Prof. Archan MISRA</p>
+                            <p class="institution">Singapore Management University (SMU)</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Yizhou WANG, PKU.jpeg" alt="Yizhou WANG" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Definitions of AGI Agents and Self-Consciousness in CUV-framework</h5>
+                            <p class="speaker-name text-danger fw-bold">Prof. Yizhou WANG</p>
+                            <p class="institution">Peking University (PKU)</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Junhui HOU, HongKong.jpg" alt="Junhui HOU" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"> Deep Modeling of 3D Geometry from Repesentation, Learning Process, to Loss Function</h5>
+                            <p class="speaker-name text-danger fw-bold">Assoc Prof. Junhui HOU</p>
+                            <p class="institution">City University of Hong Kong (CityUHK)</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Hwee Tou NG, NUS.jpeg" alt="Maria F. Cabrera-Umpierrez" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Timeline Summarization: From Moments to Milestones, without and with Constraints</h5>
+                            <p class="speaker-name text-danger fw-bold">Prof. Hwee Tou NG</p>
+                            <p class="institution">National University of Singapore (NUS)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Kenneth KWOK, ASTAR.jpeg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">AGI and Robotics</h5>
+                            <p class="speaker-name text-danger fw-bold">Dr. Kenneth KWOK</p>
+                            <p class="institution">A*STAR</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">When Bio-inspired Sensors Meet Foundation AI Models: Challenges and Approaches</h5>
+                            <p class="speaker-name text-danger fw-bold">Asst Prof. Lin WANG</p>
+                            <p class="institution">Nanyang Technological University (NTU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Chong Wah NGO, SMU.jpg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">A Visual Language Model for Food Recognition</h5>
+                            <p class="speaker-name text-danger fw-bold">Prof. Chong-Wah NGO</p>
+                            <p class="institution">Singapore Management University (SMU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Erik CAMBRIA, NTU1.jpeg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Seven Pillars for the Future of Artificial Intelligence</h5>
+                            <p class="speaker-name text-danger fw-bold">Prof. Erik CAMBRIA</p>
+                            <p class="institution">Nanyang Technological University (NTU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Xinrun WANG, SMU.jpg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">An Ever-Scaling Reasoning Benchmark for Language Models</h5>
+                            <p class="speaker-name text-danger fw-bold">Asst Prof. Xinrun WANG</p>
+                            <p class="institution">Singapore Management University (SMU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Yong WANG,NTU.jpg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Human-centered AI: A Visualization Perspective</h5>
+                            <p class="speaker-name text-danger fw-bold">Asst Prof. Yong WANG</p>
+                            <p class="institution">Nanyang Technological University (NTU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Xiuju FU, IHPC.jpeg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">AI Research and Development for Maritime Shipping</h5>
+                            <p class="speaker-name text-danger fw-bold">Dr. Xiuju FU</p>
+                            <p class="institution">A*STAR</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Marcelo H ANG JR, NUS2.jpeg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Intelligent Robotics: Bridging Everyday Life and AGI</h5>
+                            <p class="speaker-name text-danger fw-bold">Prof. Marcelo H ANG Jr</p>
+                            <p class="institution">National University of Singapore (NUS)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Cheston TAN Yin Chet, I2R, ASTAR.jpeg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Some Cognitively-Inspired Paths Towards AGI</h5>
+                            <p class="speaker-name text-danger fw-bold">Dr. Cheston TAN</p>
+                            <p class="institution">A*STAR</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Pan ZHOU,SMU.png" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Towards Efficient and Scalable Training & Inference for Large AI Models</h5>
+                            <p class="speaker-name text-danger fw-bold">Asst Prof. Pan ZHOU</p>
+                            <p class="institution">Singapore Management University (SMU)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Donghao HUANG.jpeg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Multi-Agent LLMs with Edge Deployment – A Case Study</h5>
+                            <p class="speaker-name text-danger fw-bold">Donghao HUANG</p>
+                            <p class="institution">VP, Mastercard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Wei LU,SUTD.jpeg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Research at the StatNLP Research Group</h5>
+                            <p class="speaker-name text-danger fw-bold">Assoc Prof. Wei LU</p>
+                            <p class="institution">Singapore University of Technology and Design (SUTD)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 speaker-col mb-4">
+                    <div class="card h-100 speaker-card text-center">
+                        <div class="speaker-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Speakers/Muhan Zhang,PKU.jpg" alt="Archan MISRA" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Number Cookbook: Number Understanding of Language Models and How to Improve It</h5>
+                            <p class="speaker-name text-danger fw-bold">Asst Prof. Muhan ZHANG</p>
+                            <p class="institution">Peking University (PKU)</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
     <!-- 完善后的Registration Section 包含QR code -->
+
+    <section id="organizing-committee" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Organizing Committee</h2>
+            
+            <div class="row">
+                <!-- Committee Member 1 -->
+                <div class="col-12 committee-col mb-4">
+                    <div class="card committee-card text-center">
+                        <div class="committee-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Committee/Zhaoxia WANG,SMU.jpeg" alt="Zhaoxia WANG" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <h5 class="committee-name text-danger fw-bold mb-1">Zhaoxia WANG</h5>
+                            <p class="institution mb-0">Singapore Management University</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Committee Member 2 -->
+                <div class="col-12 committee-col mb-4">
+                    <div class="card committee-card text-center">
+                        <div class="committee-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Committee/Dacheng TAO,NTU.jpeg" alt="Dacheng TAO" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <h5 class="committee-name text-danger fw-bold mb-1">Dacheng TAO</h5>
+                            <p class="institution mb-0">Nanyang Technological University</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Committee Member 3 -->
+                <div class="col-12 committee-col mb-4">
+                    <div class="card committee-card text-center">
+                        <div class="committee-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Committee/Songchun-ZHU,PKU.jpg" alt="Song-Chun ZHU" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <h5 class="committee-name text-danger fw-bold mb-1">Song-Chun ZHU</h5>
+                            <p class="institution mb-0">Peking University</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Committee Member 4 -->
+                <div class="col-12 committee-col mb-4">
+                    <div class="card committee-card text-center">
+                        <div class="committee-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Committee/Wei LU,SUTD.jpeg" alt="Wei LU" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <h5 class="committee-name text-danger fw-bold mb-1">Wei LU</h5>
+                            <p class="institution mb-0">Singapore University of Technology and Design</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Committee Member 5 -->
+                <div class="col-12 committee-col mb-4">
+                    <div class="card committee-card text-center">
+                        <div class="committee-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Committee/Kenneth KWOK, ASTAR.jpeg" alt="Kenneth KWOK" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <h5 class="committee-name text-danger fw-bold mb-1">Kenneth KWOK</h5>
+                            <p class="institution mb-0">Agency for Science, Technology and Research (A*STAR)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Committee Member 6 -->
+                <div class="col-12 committee-col mb-4">
+                    <div class="card committee-card text-center">
+                        <div class="committee-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Committee/Seng-Beng HO.jpeg" alt="Seng-Beng HO" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <h5 class="committee-name text-danger fw-bold mb-1">Seng-Beng HO</h5>
+                            <p class="institution mb-0">AI Institute Global</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="registration" class="py-5 bg-light">
         <div class="container">
             <div class="row align-items-start justify-content-start" style="min-height: 450px;">
@@ -410,22 +918,14 @@
                     </div>
                 </div>
                 
-                <div class="col-md-6 text-center mb-4 mb-md-0" style="border-left: none;">
-                    <h3 class="section-title mt-0">Organizing Committee</h3>
-                    <div class="mt-3">        
-                        <ul class="list-unstyled text-left" style="text-align: left; padding-left: 0;">
-                            <li><strong>Zhaoxia WANG,</strong> Singapore Management University</li>
-                            <li><strong>Dacheng TAO,</strong> Nanyang Technological University</li>
-                            <li><strong>Song-Chun ZHU,</strong> Peking University</li>
-                            <li><strong>Wei LU,</strong> Singapore University of Technology and Design</li>
-                            <li><strong>Kenneth KWOK,</strong> Agency for Science, Technology and Research (A*STAR)</li>
-			    <li><strong>Seng-Beng HO,</strong> AI Institute Global</li>
-				  
-                        </ul>
-                    </div>
-                    <div class="col-md-12 mt-4">
+                
+                    <div class="col-md-6 text-center mb-4 mb-md-0" style="border-left: none;">
                         <h3 class="section-title">Venue Information</h3>
-                        <p>Mochtar Riady Auditorium <br> Level 5, SMU Administration Building<br>81 Victoria Street, Singapore 188065</p>
+                        <p>
+                            81 Victoria Street, Singapore 188065<br>
+                            Level 5, SMU Administration Building<br>
+                            Mochtar Riady Auditorium
+                        </p>
                     </div>
                 </div>
             </div>
@@ -500,11 +1000,6 @@
 
 
     </script>
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
