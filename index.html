@@ -159,8 +159,8 @@
                 }
                 
                 .speaker-col {
-                    flex: 0 0 20%;
-                    max-width: 20%;
+                    flex: 0 0 25%;
+                    max-width: 25%;
                 }
                 
                 @media (max-width: 1199px) {
@@ -218,8 +218,8 @@
                 }
                 
                 .committee-col {
-                    flex: 0 0 20%;
-                    max-width: 20%;
+                    flex: 0 0 25%;
+                    max-width: 25%;
                 }
                 
                 @media (max-width: 1199px) {
@@ -441,7 +441,50 @@
         </div>
     </section>
 
-    <!-- Speakers Section - Optimized -->
+
+    <!-- Welcome Speaker Section - Optimized -->
+    <section id="speakers" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Welcome Speaker</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="speaker-card">
+                        <div class="p-4">
+                            <h3>Prof. Archan MISRA</h3>
+                            <p class="text-muted mb-4">
+                                Singapore Management University (SMU)<br>
+                            </p>
+                            
+                            <!-- Biography with Wrapped Photo -->
+                            <h5 class="border-bottom pb-2">Biography</h5>
+                            <div class="bio-section">
+                                <div class="float-md-start me-md-4 mb-3" style="max-width: 250px;">
+                                    <img src="./data/Speakers/Archan-Welcome1,SMU.jpeg" 
+                                        alt="Prof. Song-Chun Zhu" 
+                                        class="img-fluid rounded"
+                                        style="width: 100%; height: auto;">
+                                    <div class="text-center mt-2">
+                                    </div>
+                                </div>
+                                
+                                <div style="text-align: justify;">
+                                    <p>
+                                        Song-Chun Zhu received his Ph.D. degree from Harvard University in 1996, and worked at Brown, Stanford, Ohio State before joining UCLA in 2002 where he became professor of Statistics and Computer Science in 2006, and directed the UCLA Center for Vision, Cognition, Learning and Autonomy (VCLA). In 2020 he returned to China to establish a non-profit research organization --- Beijing Institute for General Artificial Intelligence (BIGAI) as the founding director, and he is appointed Chair Professor at Tsinghua and Peking Universities jointly, Dean of the Institute for Artificial Intelligence, and Dean of the School of Intelligence Science and Technology at Peking University.
+                                    </p>
+                                    <p>
+                                        He has published over 350 papers in computer vision, statistical modeling and learning, cognitive science, natural language & situated dialogue, robot autonomy, and commonsense reasoning. He received a number of honors, including the Helmholtz Test-of-time award in ICCV 2013, the Aggarwal prize from the Int'l Association of Pattern Recognition in 2008, the David Marr Prize in 2003 for image parsing with Z. Tu et al, twice Marr Prize honorary nominations with Y. Wu et al in 1999 for texture modeling and 2007 for object modeling respectively. He received the Sloan Fellowship in 2001, a US NSF Career Award in 2001, and an US ONR Young Investigator Award in 2001. He is a Fellow of IEEE since 2011, and served as the general co-chair for CVPR 2012 and CVPR 2019.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keynote Speaker Section - Optimized -->
     <section id="speakers" class="py-5">
         <div class="container">
             <h2 class="section-title text-center mb-5">Keynote Speaker</h2>
@@ -497,23 +540,6 @@
             <h2 class="section-title text-center mb-5">Speakers</h2>
                         
             <div class="row">
-                <!-- Speaker 1 -->
-                <div class="col-12 speaker-col mb-4">
-                    <div class="card h-100 speaker-card text-center">
-                        <div class="speaker-image-container mx-auto mt-4">
-                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
-                                <img src="./data/Speakers/Archan-Welcome1,SMU.jpeg" alt="Archan MISRA" 
-                                    class="img-fluid position-absolute" 
-                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Welcome</h5>
-                            <p class="speaker-name text-danger fw-bold">Prof. Archan MISRA</p>
-                            <p class="institution">Singapore Management University (SMU)</p>
-                        </div>
-                    </div>
-                </div>
     
                 <div class="col-12 speaker-col mb-4">
                     <div class="card h-100 speaker-card text-center">
@@ -525,7 +551,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Definitions of AGI Agents and Self-Consciousness in CUV-framework</h5>
                             <p class="speaker-name text-danger fw-bold">Prof. Yizhou WANG</p>
                             <p class="institution">Peking University (PKU)</p>
                         </div>
@@ -542,7 +567,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title"> Deep Modeling of 3D Geometry from Repesentation, Learning Process, to Loss Function</h5>
                             <p class="speaker-name text-danger fw-bold">Assoc Prof. Junhui HOU</p>
                             <p class="institution">City University of Hong Kong (CityUHK)</p>
                         </div>
@@ -559,7 +583,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Timeline Summarization: From Moments to Milestones, without and with Constraints</h5>
                             <p class="speaker-name text-danger fw-bold">Prof. Hwee Tou NG</p>
                             <p class="institution">National University of Singapore (NUS)</p>
                         </div>
@@ -576,7 +599,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">AGI and Robotics</h5>
                             <p class="speaker-name text-danger fw-bold">Dr. Kenneth KWOK</p>
                             <p class="institution">A*STAR</p>
                         </div>
@@ -593,7 +615,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">When Bio-inspired Sensors Meet Foundation AI Models: Challenges and Approaches</h5>
                             <p class="speaker-name text-danger fw-bold">Asst Prof. Lin WANG</p>
                             <p class="institution">Nanyang Technological University (NTU)</p>
                         </div>
@@ -610,7 +631,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">A Visual Language Model for Food Recognition</h5>
                             <p class="speaker-name text-danger fw-bold">Prof. Chong-Wah NGO</p>
                             <p class="institution">Singapore Management University (SMU)</p>
                         </div>
@@ -627,7 +647,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Seven Pillars for the Future of Artificial Intelligence</h5>
                             <p class="speaker-name text-danger fw-bold">Prof. Erik CAMBRIA</p>
                             <p class="institution">Nanyang Technological University (NTU)</p>
                         </div>
@@ -644,7 +663,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">An Ever-Scaling Reasoning Benchmark for Language Models</h5>
                             <p class="speaker-name text-danger fw-bold">Asst Prof. Xinrun WANG</p>
                             <p class="institution">Singapore Management University (SMU)</p>
                         </div>
@@ -661,7 +679,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Human-centered AI: A Visualization Perspective</h5>
                             <p class="speaker-name text-danger fw-bold">Asst Prof. Yong WANG</p>
                             <p class="institution">Nanyang Technological University (NTU)</p>
                         </div>
@@ -678,7 +695,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">AI Research and Development for Maritime Shipping</h5>
                             <p class="speaker-name text-danger fw-bold">Dr. Xiuju FU</p>
                             <p class="institution">A*STAR</p>
                         </div>
@@ -695,7 +711,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Intelligent Robotics: Bridging Everyday Life and AGI</h5>
                             <p class="speaker-name text-danger fw-bold">Prof. Marcelo H ANG Jr</p>
                             <p class="institution">National University of Singapore (NUS)</p>
                         </div>
@@ -712,7 +727,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Some Cognitively-Inspired Paths Towards AGI</h5>
                             <p class="speaker-name text-danger fw-bold">Dr. Cheston TAN</p>
                             <p class="institution">A*STAR</p>
                         </div>
@@ -729,7 +743,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Towards Efficient and Scalable Training & Inference for Large AI Models</h5>
                             <p class="speaker-name text-danger fw-bold">Asst Prof. Pan ZHOU</p>
                             <p class="institution">Singapore Management University (SMU)</p>
                         </div>
@@ -763,7 +776,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Research at the StatNLP Research Group</h5>
                             <p class="speaker-name text-danger fw-bold">Assoc Prof. Wei LU</p>
                             <p class="institution">Singapore University of Technology and Design (SUTD)</p>
                         </div>
@@ -780,7 +792,6 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Number Cookbook: Number Understanding of Language Models and How to Improve It</h5>
                             <p class="speaker-name text-danger fw-bold">Asst Prof. Muhan ZHANG</p>
                             <p class="institution">Peking University (PKU)</p>
                         </div>
@@ -850,7 +861,25 @@
                     </div>
                 </div>
                 
+                
                 <!-- Committee Member 4 -->
+                <div class="col-12 committee-col mb-4">
+                    <div class="card committee-card text-center">
+                        <div class="committee-image-container mx-auto mt-4">
+                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
+                                <img src="./data/Committee/Marcelo H ANG JR, NUS1.jpeg" alt="Kenneth KWOK" 
+                                    class="img-fluid position-absolute" 
+                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <h5 class="committee-name text-danger fw-bold mb-1">Hwee Tou NG</h5>
+                            <p class="institution mb-0">National University of Singapore (NUS)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Committee Member 5 -->
                 <div class="col-12 committee-col mb-4">
                     <div class="card committee-card text-center">
                         <div class="committee-image-container mx-auto mt-4">
@@ -867,7 +896,7 @@
                     </div>
                 </div>
                 
-                <!-- Committee Member 5 -->
+                
                 <div class="col-12 committee-col mb-4">
                     <div class="card committee-card text-center">
                         <div class="committee-image-container mx-auto mt-4">
@@ -884,7 +913,7 @@
                     </div>
                 </div>
                 
-                <!-- Committee Member 6 -->
+                <!-- Committee Member 7 -->
                 <div class="col-12 committee-col mb-4">
                     <div class="card committee-card text-center">
                         <div class="committee-image-container mx-auto mt-4">
@@ -902,21 +931,7 @@
                 </div>
 
                 <!-- Committee Member 7 -->
-                <div class="col-12 committee-col mb-4">
-                    <div class="card committee-card text-center">
-                        <div class="committee-image-container mx-auto mt-4">
-                            <div class="rounded-circle overflow-hidden" style="width: 100%; padding-bottom: 100%; position: relative;">
-                                <img src="./data/Committee/Marcelo H ANG JR, NUS1.jpeg" alt="Kenneth KWOK" 
-                                    class="img-fluid position-absolute" 
-                                    style="top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                        </div>
-                        <div class="card-body py-4">
-                            <h5 class="committee-name text-danger fw-bold mb-1">Hwee Tou NG</h5>
-                            <p class="institution mb-0">National University of Singapore (NUS)</p>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
         </div>
