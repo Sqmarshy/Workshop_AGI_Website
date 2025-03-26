@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Workshop on Frontiers of AGI 2025 - Exploring the future of Artificial General Intelligence">
+    <meta property="og:image" content="background.jpeg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop on Frontiers of Artificial General Intelligence (AGI) 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            border-bottom: none;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+
+        /* 添加对齐修正样式 */
+        @media (min-width: 768px) {
+            .contact-info {
+                padding-top: 2.8rem; /* 微调垂直对齐 */
+            }
+        }
+
+    
+
+
+        /* 注册部分布局调整 */
+        .contact-info {
+            border-left: 2px solid #eee;
+            padding-left: 2rem;
+        }
+        @media (min-width: 768px) {
+            .contact-info {
+                padding-top: 2.8rem; /* 微调垂直对齐 */
+            }
+        }
+
+        
+        /* 新增倒计时样式 */
+        .countdown {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 50px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .countdown-number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        /* 新增QR code样式 */
+        .qr-section {
+            border-left: 3px solid var(--secondary-color);
+            padding-left: 30px;
+        }
+        .qr-code {
+            max-width: 200px;
+            margin: 20px auto;
+        }
+
+        /* 原有样式保持不变... */
+
+        .hero-section {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.9)),
+                url('./background.jpeg') center/cover;
+            color: white;
+            padding: 120px 0; /* 恢复原有padding */
+            text-align: center;
+            position: relative;
+            /* 移除以下属性 */
+            /* min-height: 100vh; */
+            /* display: flex; */
+            /* align-items: center; */
+        }
+
+        /* 添加文字阴影提升可读性 */
+        .hero-section h1,
+        .hero-section h3 {
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: transparent !important;
+            transition: background-color 0.3s;
+            height: 80px;
+        }
+        .navbar-scrolled {
+            background-color: var(--primary-color) !important;
+        }
+
+
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), #34495e);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .schedule-table {
+            overflow-x: auto;
+        }
+        
+        .speaker-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        
+        .speaker-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .register-btn {
+            background-color: var(--secondary-color);
+            color: white !important;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.85); padding: 15px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="font-family: 'Montserrat', 'Arial', sans-serif; font-weight: 700; font-size: 1.5rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">Workshop on Frontiers of AGI 2025</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#schedule" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#speakers" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Keynote Speaker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#registration" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Registration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sponsors" style="font-weight: 600; font-size: 1.3rem; padding: 0.5rem 1rem; color: #ffffff; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 3px rgba(0,0,0,0.5); transition: color 0.3s;">Sponsors</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: url('./cover_new.jpg'); background-size: cover; background-position: center; color: white; padding: 140px 0; text-align: left;">
+        <div class="container">
+            <h1 style="font-family: 'Montserrat', 'Arial', sans-serif; font-weight: 800; font-size: 3.6rem; line-height: 1.2; margin-bottom: 1.5rem; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.5);">Workshop on Frontiers of <br>Artificial General Intelligence (AGI)</h1>
+	    <h3 style="font-family: 'Montserrat', 'Arial', sans-serif; font-weight: 600; font-size: 2rem; display: flex; align-items: center; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 3px rgba(0,0,0,0.5);">
+                <div style="font-family: 'Montserrat', 'Arial', sans-serif; font-weight: 600; font-size: 2rem; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 3px rgba(0,0,0,0.5);">
+                    <div style="margin-bottom: 15px;">📅 23rd April 2025</div>
+                    <div>📍 Mochtar Riady Auditorium @ SMU Administration Building</div>
+                </div>
+            </h3>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section py-3 bg-light">
+        <div class="container text-center">
+            <div class="mt-4">
+                <a href="https://forms.office.com/r/zsikMpJ1vy" class="btn btn-light btn-lg register-btn">Register Now</a>
+            </div>
+            <div class="countdown">
+                <span class="countdown-number" id="days">00</span>Days
+                <span class="countdown-number" id="hours">00</span>Hrs
+                <span class="countdown-number" id="minutes">00</span>Min
+            </div>
+        </div>
+    </section>
+
+    <!-- 完善后的About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">About the Workshop</h2>
+            <div class="row">
+                <div class="col-lg-7">
+                    <p class="lead">
+						<p style="text-align: justify;">The Workshop on Frontiers of Artificial General Intelligence (AGI) is an insightful and dynamic platform dedicated to exploring the advancing field of AGI. This workshop brings together leading experts, researchers, and enthusiasts to engage in stimulating discussions, share cutting-edge research, and collaborate on the most pressing challenges and opportunities in the development of AGI. </p>
+
+                       <p style="text-align: justify;"> Notably, a pioneer of AGI, Professor Song-Chun Zhu of Peking University, will deliver the keynote speech and share his vision on AGI and AI.
+                        
+                      <p style="text-align: justify;"> All AI researchers around the world, including attendees of ICLR 2025, are welcome to attend this workshop. The workshop will feature 18 speakers, including the welcome speaker and keynote speaker, who will guide attendees in exploring topics such as the theoretical foundations of AGI, its ethical implications, potential applications across various industries, and future directions for AGI.</p>
+                        
+                       <p style="text-align: justify;">The workshop will feature expert talks, interactive discussions, and a collaborative environment at the cutting edge of AGI research. The goal is to push the boundaries of knowledge, encourage innovative ideas, foster dynamic global discussions, share groundbreaking research, inspire novel methodologies in AGI, shape the future of AGI systems, and deepen our understanding of AGI's impact on society. </p>
+                        
+                       <p style="text-align: justify;">This AGI workshop will serve as an excellent platform for long-term collaboration between various Singapore universities/institutions as well as international universities/institutions.</p>
+                        </p>
+                    
+                    <h4 class="mt-4">Key Objectives：</h4>
+                    <ul>
+                        <li>Showcase the contributions of AI researchers from Singapore's universities and entities, alongside international AI researchers, to both the Singapore AI ecosystems and global AI ecosystems.</li>
+                        <li>Foster future collaborations and partnerships</li>
+                        <li>Enhance communication and knowledge exchange among AI researchers</li>
+                    </ul>
+
+                    <h4 class="mt-4">Topics of focus include, but not limited to:</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>AGI and Large-scale Social Simulators</li>
+                                <li>Utility-Value (UV) framework for AGI</li>
+                                <li>Integration of Value, Reasoning, Vision, Language, and Embodiment for AGI</li>
+                                <li>AI in Healthcare, Law, Education, and Environmental Science</li>
+                                <li>Ethics, Safety, and Governance in AGI</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Cognitive Architectures and Machine Learning</li>
+                                <li>Human-AI Collaboration</li>
+                                <li>Multi-Agent Systems</li>
+				<li>Artificial Creativity, Cognitive Science, and Neuroscience</li>
+                                <li>Long-term AGI Impacts and Scalability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 新增合作机构 -->
+                <div class="col-lg-5">
+                    <div class="row g-4"> <!-- 新增嵌套栅格 -->
+                        <div class="col-12">
+                            <div class="bg-light p-4 rounded">
+                                <h5>For more information please contact: 
+</h5>
+                                <ul class="list-unstyled">
+                                    <li>zxwang@smu.edu.sg; </li>
+                                    <li>dacheng.tao@ntu.edu.sg.</li>
+									 
+                                   
+                                    
+                                </ul>
+                                <!-- 机构列表 -->
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3">
+                                <h4>Venue</h4>
+                                <p>Mochtar Riady Auditorium <br> Level 5, SMU Administration Building<br>81 Victoria Street<br>Singapore 188065</p>
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.795151499832!2d103.8512802!3d1.2976848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a654f07833%3A0x4e4b1e444ff9bd9!2sSingapore%20188065!5e0!3m2!1sen!2ssg!4v1647225300114!5m2!1sen!2ssg" 
+                                    width="400" 
+                                    height="400" 
+                                    style="border:0; max-width:100%;"
+                                    allowfullscreen="" 
+                                    loading="lazy"
+                                    allow="geolocation">
+                            </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>                          
+      
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section - Optimized -->
+    <section id="schedule" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Program Schedule</h2>
+            <div class="schedule-table">
+                <table class="table table-hover table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th width="20%">Time</th>
+                            <th>Sessions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Morning Sessions -->
+                        <tr class="table-primary">
+                            <td colspan="2"><strong>🌅 Morning Session</strong></td>
+                        </tr>
+                        <tr><td>8:30 AM-8:50 AM</td><td>📋 Registration & Refreshments</td></tr>
+                        <tr><td>8:50 AM-8:55 AM</td><td><strong>Prof. Archan MISRA, SMU</strong> (<strong>Welcome</strong>)</td></tr>
+                        <tr><td>8:55 AM-9:55 AM</td><td><strong>Prof. Song-Chun ZHU, PKU</strong> (<strong>Keynote</strong>) <em>AGI Path Based on Eastern Philosophy</em></td></tr>
+                        <tr><td>9:55 AM-10:15 AM</td><td><strong>Prof. Yizhou WANG, PKU</strong>: <em>Definitions of AGI Agents and Self-Consciousness in CUV-framework</em></td></tr>
+                        <tr><td>10:15 AM-10:35 AM</td><td><strong>Assoc Prof. Junhui HOU, City U. of HK</strong>: <em>Deep Modeling of 3D Geometry from Repesentation, Learning Process, to  Loss Function </em></td></tr>
+                        <tr><td>10:35 AM-11:10 AM</td><td class="text-muted">☕ Tea Break</td></tr>
+
+                        <!-- Late Morning -->
+                        <tr><td>11:10 AM-11:30 AM</td><td><strong>Prof. Hwee Tou NG, NUS</strong>: <em>Timeline Summarization: From Moments to Milestones, without and with Constraints</em></td></tr>
+                        <tr><td>11:30 AM-11:50 AM</td><td><strong>Dr. Kenneth KWOK, A*STAR</strong>: <em>AGI and Robotics</em></td></tr>
+
+                        <tr><td>11:50 AM-12:10 PM</td><td><strong>Asst Prof. Lin WANG, NTU</strong>: <em>When Bio-inspired Sensors Meet Foundation AI Models: Challenges and Approaches</em></td></tr>
+                        <tr><td>12:10 PM-12:30 PM</td><td><strong>Prof. Chong-Wah NGO, SMU</strong>: <em>A Visual Language Model for Food Recognition</em></td></tr>
+                        <tr><td>12:30 PM-2:00 PM</td><td class="text-muted">🍽️ Lunch</td></tr>
+
+                        <!-- Afternoon Sessions -->
+                        <tr class="table-primary">
+                            <td colspan="2"><strong>🌞 Afternoon Session</strong></td>
+                        </tr>
+                        <tr><td>2:00 PM-2:20 PM</td><td><strong>Prof. Erik CAMBRIA, NTU</strong>: <em>Seven Pillars for the Future of Artificial Intelligence</em></td></tr>
+                        <tr><td>2:20 PM-2:40 PM</td><td><strong>Asst Prof. Xinrun WANG, SMU</strong>: <em>An Ever-Scaling Reasoning Benchmark for Language Models</em></td></tr>
+                        <tr><td>2:40 PM-3:00 PM</td><td><strong>Asst Prof. Yong WANG, NTU</strong>: <em>Human-centered AI: A Visualization Perspective</em></td></tr>
+                        <tr><td>3:00 PM-3:20 PM</td><td><strong>Dr. Xiuju FU, A*STAR</strong>: <em>AI Research and Development for Maritime Shipping</em></td></tr>
+                        <tr><td>3:20 PM-3:40 PM</td><td><strong>Prof. Marcelo H ANG JR, NUS</strong>: <em>Intelligent Robotics: Bridging Everyday Life and AGI</em></td></tr>
+                        <tr><td>3:40 PM-4:10 PM</td><td class="text-muted">☕ Tea Break</td></tr>
+                        <tr><td>4:10 PM-4:30 PM</td><td><strong>Dr. Cheston TAN, A*STAR</strong>: <em>Some Cognitively-Inspired Paths Towards AGI</em></td></tr>
+                        <tr><td>4:30 PM-4:50 PM</td><td><strong>Asst Prof. Pan ZHOU, SMU</strong>: <em>Towards Efficient and Scalable Training & Inference for Large AI Models</em></td></tr>
+                        <tr><td>4:50 PM-5:10 PM</td><td><strong>Donghao HUANG, VP, Mastercard</strong>: <em>Multi-Agent LLMs with Edge Deployment – A Case Study</em></td></tr>
+                        <tr><td>5:10 PM-5:30 PM</td><td><strong>Assoc Prof. Wei LU, SUTD</strong>: <em>Research at the StatNLP Research Group</em></td></tr>
+                        <tr><td>5:30 PM-5:50 PM</td><td><strong>Asst Prof. Muhan ZHANG, PKU</strong>: <em>Number Cookbook: Number Understanding of Language Models and How to Improve It</em></td></tr>
+                        <tr><td>6:00 PM</td><td>🍴<strong>Dinner</strong>: Introduction of Peking U. Institute of AI & Beijing Institute for General AI (BIGAI) </td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section - Optimized -->
+    <section id="speakers" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Keynote Speaker</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="speaker-card">
+                        <div class="p-4">
+                            <h3>Prof. Song-Chun ZHU</h3>
+                            <p class="text-muted mb-4">
+                                Peking University & Tsinghua University<br>
+                                Founding Director, Beijing Institute for General Artificial Intelligence (BIGAI)
+                            </p>
+                            
+                            <!-- Biography with Wrapped Photo -->
+                            <h5 class="border-bottom pb-2">Biography</h5>
+                            <div class="bio-section">
+                                <div class="float-md-start me-md-4 mb-3" style="max-width: 250px;">
+                                    <img src="./speaker.jpg" 
+                                        alt="Prof. Song-Chun Zhu" 
+                                        class="img-fluid rounded"
+                                        style="width: 100%; height: auto;">
+                                    <div class="text-center mt-2">
+                                    </div>
+                                </div>
+                                
+                                <div style="text-align: justify;">
+                                    <p>
+                                        Song-Chun Zhu received his Ph.D. degree from Harvard University in 1996, and worked at Brown, Stanford, Ohio State before joining UCLA in 2002 where he became professor of Statistics and Computer Science in 2006, and directed the UCLA Center for Vision, Cognition, Learning and Autonomy (VCLA). In 2020 he returned to China to establish a non-profit research organization --- Beijing Institute for General Artificial Intelligence (BIGAI) as the founding director, and he is appointed Chair Professor at Tsinghua and Peking Universities jointly, Dean of the Institute for Artificial Intelligence, and Dean of the School of Intelligence Science and Technology at Peking University.
+                                    </p>
+                                    <p>
+                                        He has published over 350 papers in computer vision, statistical modeling and learning, cognitive science, natural language & situated dialogue, robot autonomy, and commonsense reasoning. He received a number of honors, including the Helmholtz Test-of-time award in ICCV 2013, the Aggarwal prize from the Int'l Association of Pattern Recognition in 2008, the David Marr Prize in 2003 for image parsing with Z. Tu et al, twice Marr Prize honorary nominations with Y. Wu et al in 1999 for texture modeling and 2007 for object modeling respectively. He received the Sloan Fellowship in 2001, a US NSF Career Award in 2001, and an US ONR Young Investigator Award in 2001. He is a Fellow of IEEE since 2011, and served as the general co-chair for CVPR 2012 and CVPR 2019.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Abstract Section -->
+                            <div class="mt-4">
+                                <h5 class="border-bottom pb-2">Abstract:</h5>
+                                <p style="text-align: justify;">
+                                    In this talk, I present a distinctively Eastern approach to Artificial General Intelligence rooted in Chinese philosophical traditions. The CUV framework defines AGI through three interconnected systems: Cognitive architecture (C), potential functions (U) representing skills, and value functions (V) encompassing motivations from survival to social responsibility. Inspired by concepts like Wang Yangming's "unity of knowledge and action," this framework aims to create value-driven intelligence rather than data-driven imitation, developing machines with the adaptability of crows rather than the mimicry of parrots. The Tong Test quantitatively measures an AGI's abilities and values across five levels, examining physical and social interaction in complex environments and representing a paradigm shift from "large data, small tasks" to "small data, large tasks." Our research has produced "TongTong," the first value-driven AGI agent, demonstrating a path toward human-centered intelligence that embodies wisdom—China's contribution to global technological development.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 完善后的Registration Section 包含QR code -->
+    <section id="registration" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-start justify-content-start" style="min-height: 450px;">
+                <div class="col-md-6 text-center mb-4 mb-md-0 d-flex flex-column justify-content-center" style="border-left: none;">
+                    <h3 class="section-title mb-4">Registration</h3>
+                    <a href="https://forms.office.com/r/zsikMpJ1vy" class="btn btn-primary btn-lg register-btn mb-3">Register Now</a>
+                    <!-- QR Code -->
+                    <div class="qr-section mt-4" style="border-left: none;">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://forms.office.com/r/zsikMpJ1vy" 
+                             alt="Registration QR Code" class="qr-code img-fluid">
+                        <p class="text-muted">Scan to register</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 text-center mb-4 mb-md-0" style="border-left: none;">
+                    <h3 class="section-title mt-0">Organizing Committee</h3>
+                    <div class="mt-3">        
+                        <ul class="list-unstyled text-left" style="text-align: left; padding-left: 0;">
+                            <li><strong>Zhaoxia WANG,</strong> Singapore Management University</li>
+                            <li><strong>Dacheng TAO,</strong> Nanyang Technological University</li>
+                            <li><strong>Song-Chun ZHU,</strong> Peking University</li>
+                            <li><strong>Wei LU,</strong> Singapore University of Technology and Design</li>
+                            <li><strong>Kenneth KWOK,</strong> Agency for Science, Technology and Research (A*STAR)</li>
+			    <li><strong>Seng-Beng HO,</strong> AI Institute Global</li>
+				  
+                        </ul>
+                    </div>
+                    <div class="col-md-12 mt-4">
+                        <h3 class="section-title">Venue Information</h3>
+                        <p>Mochtar Riady Auditorium <br> Level 5, SMU Administration Building<br>81 Victoria Street, Singapore 188065</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="py-5">
+        <div class="container">
+            <h2 class="section-title mb-5 text-center">Sponsors (available soon)</h2>
+            
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col mb-4">
+                    <img src="path/to/sponsor1-logo.png" alt="Sponsor 1" class="img-fluid sponsor-logo" style="max-height: 100px;">
+                </div>
+                <div class="col mb-4">
+                    <img src="path/to/sponsor2-logo.png" alt="Sponsor 2" class="img-fluid sponsor-logo" style="max-height: 100px;">
+                </div>
+                <div class="col mb-4">
+                    <img src="path/to/sponsor3-logo.png" alt="Sponsor 3" class="img-fluid sponsor-logo" style="max-height: 100px;">
+                </div>
+                <div class="col mb-4">
+                    <img src="path/to/sponsor4-logo.png" alt="Sponsor 4" class="img-fluid sponsor-logo" style="max-height: 100px;">
+                </div>
+                <div class="col mb-4">
+                    <img src="path/to/sponsor4-logo.png" alt="Sponsor 4" class="img-fluid sponsor-logo" style="max-height: 100px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+            
+        </div>
+    </section>
+
+    <!-- 倒计时脚本 -->
+    <script>
+        // 设置目标日期（2025年4月23日 8:30 AM GMT+8）
+        const countDownDate = new Date("April 23, 2025 00:30:00 GMT+0000").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "EVENT STARTED";
+            }
+        }
+
+        // 立即执行一次并设置定时器
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
